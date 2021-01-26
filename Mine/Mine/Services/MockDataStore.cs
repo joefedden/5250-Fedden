@@ -14,12 +14,12 @@ namespace Mine.Services
         {
             items = new List<ItemModel>()
             {
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fourth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Fifth item", Description="This is an item description." },
-                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Sixth item", Description="This is an item description." }
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Honda S2000", Description="237 hp/162 lb-ft", Value=9 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Volkswagen Golf GTI", Description="220 hp/258 lb-ft", Value=8},
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Mazda RX-7 FD", Description="238 hp/218 lb-ft", Value=5 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Toyota MR2 GT-S Turbo", Description="242 hp/224 lb-ft", Value=4 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Mitsubishi Lancer Evolution IX", Description="286 hp/289 lb-ft", Value=6 },
+                new ItemModel { Id = Guid.NewGuid().ToString(), Text = "Acura NSX", Description="270 hp/210 lb-ft", Value=7 }
             };
         }
 
