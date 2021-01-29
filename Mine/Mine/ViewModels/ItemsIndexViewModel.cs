@@ -90,6 +90,11 @@ namespace Mine.ViewModels
             return result;
         }
 
+        /// <summary>
+        /// Update the record from the system
+        /// </summary>
+        /// <param name="data">The Record to Update</param>
+        /// <returns>True if Updated</returns>
         public async Task<bool> UpdateAsync(ItemModel data)
         {
             var record = await ReadAsync(data.Id);
