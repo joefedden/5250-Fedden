@@ -89,5 +89,16 @@ namespace Mine.ViewModels
             var result = await DataStore.DeleteAsync(data.Id);
             return result;
         }
+
+        public async Task<bool> UpdateAsync(ItemModel data)
+        {
+            var record = await ReadAsync(data.Id);
+            if (record == null) { return false; }
+
+            var result = await DataStore.UpdateAsync(data);
+
+            var canExecute = LoadItemsCommand.CanExecute(null);
+            return result;
+        }
     }
 }
