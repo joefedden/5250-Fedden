@@ -35,6 +35,11 @@ namespace Mine.Services
             }
         }
 
+        /// <summary>
+        /// Creates Item and send to DB
+        /// </summary>
+        /// <param name="item"></param>
+        /// <returns></returns>
         public async Task<bool> CreateAsync(ItemModel item)
         {
             if (item == null) { return false; }
@@ -55,9 +60,17 @@ namespace Mine.Services
             throw new NotImplementedException();
         }
 
+        /// <summary>
+        /// Uses Linq to match item from index to readpage
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public Task<ItemModel> ReadAsync(string id)
         {
-            throw new NotImplementedException();
+            if (id == null) { return null; }
+
+            var result = Database.Table<ItemModel>().FirstOrDefaultAsync(m => m.Id.Equals(id));
+            return result;
         }
 
         public async Task<IEnumerable<ItemModel>> IndexAsync(bool forceRefresh = false)
